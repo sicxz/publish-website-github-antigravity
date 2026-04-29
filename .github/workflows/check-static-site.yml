@@ -1,0 +1,41 @@
+name: Check Static Site Structure
+
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+
+jobs:
+  check-site-structure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Show project files
+        run: |
+          echo "Top-level and nearby files:"
+          find . -maxdepth 2 -path ./.git -prune -o -type f -print | sed 's#^\./##' | sort
+
+      - name: Check for root index.html
+        run: |
+          if [ -f "index.html" ]; then
+            echo "Success: index.html exists at the root of the repository."
+          else
+            echo "Error: index.html is missing from the root of the repository."
+            echo ""
+            echo "GitHub Pages needs index.html at the top level for this tutorial."
+            echo ""
+            echo "Looking for index.html one folder deep..."
+            FOUND=$(find . -mindepth 2 -maxdepth 3 -name "index.html" | head -n 5)
+            if [ -n "$FOUND" ]; then
+              echo "Found possible nested index.html:"
+              echo "$FOUND"
+              echo ""
+              echo "This usually means you uploaded the whole project folder instead of the files inside it."
+              echo "Fix: move index.html, style.css, script.js, and images/ to the root of the repo."
+            else
+              echo "No index.html file was found nearby."
+              echo "Fix: add your homepage file to the root of the repo and name it index.html."
+            fi
+            exit 1
+          fi

@@ -4,6 +4,8 @@ A beginner-friendly tutorial for design students who already have a completed HT
 
 No GitHub Desktop. No VS Code required. No terminal required.
 
+[Jump to tutorial start](#tutorial-start)
+
 ## Goal
 Students will publish an existing website project through GitHub Pages and connect it to Antigravity for future edits.
 
@@ -21,6 +23,19 @@ GitHub stores the site.
 Antigravity edits the site.
 
 GitHub Pages publishes the site.
+
+## About the optional Action
+This repo includes an optional GitHub Actions structure check. It checks for beginner mistakes like a missing root-level `index.html` or an extra folder layer.
+
+It does not publish the site.
+
+For plain static student sites, the default publishing path is still:
+
+```text
+Settings -> Pages -> Deploy from a branch -> main -> / (root)
+```
+
+Actions-based Pages deployment is better when a site has a build step or custom deployment process. This tutorial assumes a plain static site with files like `index.html`, `style.css`, `script.js`, and `images/`.
 
 ## Why this tutorial starts in GitHub
 You may already have your files open in Antigravity. That is fine.
@@ -65,6 +80,8 @@ To send changes to GitHub, use Source Control:
 3. Push or sync.
 
 Commit saves a checkpoint. Push sends it to GitHub.
+
+## Tutorial Start
 
 ## Before you start
 You need:

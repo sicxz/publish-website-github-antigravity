@@ -16,6 +16,7 @@
 - The difference between uploading a folder and uploading the files inside the folder.
 - Where `index.html` should appear on the first page of the repo.
 - Settings -> Pages -> Deploy from a branch -> `main` -> `/ (root)`.
+- The optional structure-checking Action as feedback, not as deployment.
 - The green **Code** button and the repo URL.
 - Antigravity clone, edit, commit, and push.
 - What happens if students open a normal folder in Antigravity instead of cloning the repo.
@@ -37,6 +38,8 @@ GitHub stores the site. Antigravity edits the site. GitHub Pages publishes the s
 Antigravity can edit any folder, but GitHub Pages can only publish files that are in GitHub.
 
 Commit saves the change. Push sends it back to GitHub.
+
+The Action checks the folder structure. Pages publishes the site.
 
 ## Suggested Submission Requirement
 Students submit:

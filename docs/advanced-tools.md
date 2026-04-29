@@ -38,6 +38,17 @@ Generated issues can help an instructor manage a larger class workflow.
 
 Students do not need generated issues to publish their websites.
 
+## Structure-Checking Action
+This repo includes an optional GitHub Actions workflow that checks whether `index.html` is at the root of the repository.
+
+It is a feedback tool, not a deployment tool.
+
+The workflow can help students diagnose:
+
+- missing `index.html`
+- an extra folder layer
+- files uploaded to the wrong place
+
 ## Actions-Based Pages Deployment
 GitHub Pages can publish from a branch or from a GitHub Actions workflow.
 
