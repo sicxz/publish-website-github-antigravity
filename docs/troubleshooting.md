@@ -28,6 +28,24 @@ Saving a file only changes your local copy. GitHub changes after you commit and 
 Open **Source Control** in Antigravity. Commit the change, then click **Push** or **Sync**.
 
 ## Problem
+Antigravity says Git is missing.
+
+## Cause
+Antigravity can edit files without Git, but cloning, committing, and pushing need Git on the computer.
+
+## Fix
+Install Git, restart Antigravity, then try **Clone Repository** or **Source Control** again.
+
+## Problem
+Antigravity opens my files, but Source Control is empty.
+
+## Cause
+You may have opened a normal folder instead of the cloned GitHub repository. A normal folder is not automatically connected to GitHub.
+
+## Fix
+Use the green **Code** button on GitHub to copy the repository URL. In Antigravity, use **Clone Repository**, paste the URL, and open the cloned folder.
+
+## Problem
 I committed but forgot to push.
 
 ## Cause

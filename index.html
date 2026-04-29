@@ -7,16 +7,96 @@
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  <main class="wrap">
-    <p class="label">GitHub + Antigravity</p>
-    <h1>Publish your existing website with GitHub Pages.</h1>
-    <p>
-      GitHub stores the site. Antigravity edits the site. GitHub Pages publishes the site.
-    </p>
-    <p>
-      Start with the README, then use the checklist and troubleshooting guide as you work.
-    </p>
-    <a href="README.md">Open the tutorial</a>
+  <header class="hero">
+    <div class="hero-inner">
+      <p class="label">GitHub + Antigravity + Pages</p>
+      <h1>Publish the website you already built.</h1>
+      <p class="lede">
+        Start with your finished HTML/CSS folder, put it on GitHub, publish it with GitHub Pages, then use Antigravity for future edits.
+      </p>
+      <div class="actions">
+        <a class="button primary" href="README.md">Read the full tutorial</a>
+        <a class="button secondary" href="docs/student-checklist.md">Open checklist</a>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="model" aria-labelledby="model-heading">
+      <h2 id="model-heading">The simple model</h2>
+      <div class="model-grid">
+        <article>
+          <span>1</span>
+          <h3>GitHub stores</h3>
+          <p>Your repository holds the files that Pages can publish.</p>
+        </article>
+        <article>
+          <span>2</span>
+          <h3>Antigravity edits</h3>
+          <p>Your cloned repo opens in Antigravity for changes and source control.</p>
+        </article>
+        <article>
+          <span>3</span>
+          <h3>Pages publishes</h3>
+          <p>GitHub Pages turns the repo files into a live website link.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="explain" aria-labelledby="why-heading">
+      <div>
+        <p class="eyebrow">Common question</p>
+        <h2 id="why-heading">Why not just use the files already in Antigravity?</h2>
+      </div>
+      <div class="explain-copy">
+        <p>
+          You can edit local files in Antigravity, but GitHub Pages cannot publish a normal folder on your computer. Pages publishes from files stored in a GitHub repository.
+        </p>
+        <p>
+          For this class, upload the finished project to GitHub first. Then clone that repo in Antigravity so your editor is working with a folder that already knows where to push changes.
+        </p>
+      </div>
+    </section>
+
+    <section class="split" aria-label="Git and Antigravity notes">
+      <article>
+        <p class="eyebrow">Antigravity + GitHub</p>
+        <h2>Can Antigravity push new files?</h2>
+        <p>
+          Yes, once the folder is connected to a GitHub repository. New files still need to be saved, committed, and pushed. Antigravity does not automatically publish every file the moment you create it.
+        </p>
+      </article>
+      <article>
+        <p class="eyebrow">Local setup</p>
+        <h2>Does Git need to be installed?</h2>
+        <p>
+          Yes for local source control. You do not need to type Git commands for this tutorial, but Antigravity needs Git available on the computer to clone, commit, and push.
+        </p>
+      </article>
+    </section>
+
+    <section class="steps" aria-labelledby="steps-heading">
+      <h2 id="steps-heading">Recommended student path</h2>
+      <ol>
+        <li>Check that <code>index.html</code> is at the top level of your project folder.</li>
+        <li>Create a new public GitHub repository.</li>
+        <li>Upload the contents of your project folder.</li>
+        <li>Turn on GitHub Pages from <code>main</code> and <code>/ (root)</code>.</li>
+        <li>Clone the repo in Antigravity.</li>
+        <li>Edit one line, commit, and push.</li>
+        <li>Submit your GitHub repo URL and live Pages URL.</li>
+      </ol>
+    </section>
+
+    <section class="links" aria-labelledby="links-heading">
+      <h2 id="links-heading">Helpful guides</h2>
+      <div class="link-list">
+        <a href="docs/project-structure.md">Project structure</a>
+        <a href="docs/troubleshooting.md">Troubleshooting</a>
+        <a href="docs/advanced-tools.md">Advanced tools</a>
+        <a href="docs/instructor-notes.md">Instructor notes</a>
+      </div>
+    </section>
   </main>
 </body>
 </html>

@@ -22,11 +22,56 @@ Antigravity edits the site.
 
 GitHub Pages publishes the site.
 
+## Why this tutorial starts in GitHub
+You may already have your files open in Antigravity. That is fine.
+
+The reason this tutorial starts by uploading to GitHub is that GitHub Pages can only publish files that are in a GitHub repository. A normal folder on your computer is not public yet, even if Antigravity can edit it.
+
+For beginners, the clearest order is:
+
+1. Put the finished website files in GitHub.
+2. Turn on GitHub Pages.
+3. Clone the GitHub repo into Antigravity.
+4. Use Antigravity for future edits.
+
+This avoids the most common setup problems: uploading the wrong folder, missing `index.html`, or trying to push from a folder that is not connected to GitHub yet.
+
+## Can I start from Antigravity instead?
+Yes, but it adds more setup.
+
+If your project is already open in Antigravity, Antigravity can help commit and push changes after the folder is connected to a GitHub repository. That usually means:
+
+1. Git is installed on the computer.
+2. The folder is a Git repository.
+3. The repository has a GitHub remote.
+4. You are signed in or authenticated so GitHub accepts the push.
+
+That is a good workflow later. For this class, use the GitHub-first path below so everyone reaches a live site with fewer setup variables.
+
+## Do I need Git installed?
+For the upload and publish steps on GitHub.com, no.
+
+For cloning, committing, and pushing from Antigravity, yes. Antigravity's Source Control features rely on Git. If Git is missing, Antigravity may ask you to install it or source control may not work correctly.
+
+You do not need to use the terminal in this tutorial, but Git still needs to exist on the machine for local commit and push workflows.
+
+## Will Antigravity automatically send my files to GitHub?
+No. Creating or saving a file in Antigravity changes the copy on your computer.
+
+To send changes to GitHub, use Source Control:
+
+1. Save the file.
+2. Commit the change.
+3. Push or sync.
+
+Commit saves a checkpoint. Push sends it to GitHub.
+
 ## Before you start
 You need:
 
 - a GitHub account
 - Antigravity installed
+- Git installed on your computer if you will clone, commit, and push from Antigravity
 - a completed project folder
 - an `index.html` file
 
@@ -97,6 +142,8 @@ https://your-username.github.io/your-repo-name/
 7. Choose where to save the folder on your computer.
 8. Open the cloned folder in Antigravity.
 
+Why clone instead of just opening your old folder? Cloning gives Antigravity a local copy that is already connected to GitHub. That makes commit and push much simpler.
+
 ## Step 6: Make one small edit in Antigravity
 1. Open `index.html`.
 2. Edit one small line of text.
@@ -125,6 +172,8 @@ Submit both links:
 - **I see a folder instead of `index.html`.** You probably uploaded the whole project folder. Move the files inside it to the root of the repo.
 - **My Pages site is 404.** Check that Pages is set to `main` and `/ (root)`, then wait a minute or two.
 - **I edited in Antigravity but GitHub did not change.** Make sure you committed and pushed.
+- **Antigravity says Git is missing.** Install Git, restart Antigravity, then try cloning or Source Control again.
+- **Antigravity opens my files but Source Control is empty.** You may have opened a normal folder instead of the cloned GitHub repo.
 - **I committed but forgot to push.** Open Source Control in Antigravity and click **Push** or **Sync**.
 - **My images are broken.** Check the image file names and folder paths.
 - **My file is named `Index.html` instead of `index.html`.** Rename it to lowercase `index.html`.
@@ -139,3 +188,9 @@ Submit both links:
 
 ## For Instructors
 This repo keeps the main student path intentionally narrow. Optional tools and automation notes live in the `docs/` folder so the README can stay focused on publishing the actual student project.
+
+Platform references:
+
+- [Google Antigravity codelab](https://codelabs.developers.google.com/getting-started-google-antigravity)
+- [GitHub: Set up Git](https://docs.github.com/en/get-started/quickstart/set-up-git)
+- [GitHub Pages: Configure a publishing source](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site)

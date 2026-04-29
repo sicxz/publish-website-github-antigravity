@@ -1,66 +1,235 @@
 :root {
-  --bg: #f6f7f2;
-  --surface: #ffffff;
-  --text: #202124;
-  --muted: #59615c;
-  --border: #d8ddd2;
+  --bg: #f7f5ef;
+  --surface: #fffefa;
+  --ink: #202124;
+  --muted: #5c625c;
+  --line: #d9d5c9;
   --accent: #146c43;
+  --accent-strong: #0d4f31;
+  --warm: #b55d2c;
 }
 
 * {
   box-sizing: border-box;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
-  min-height: 100vh;
   font-family: "Segoe UI", Tahoma, sans-serif;
   background: var(--bg);
-  color: var(--text);
+  color: var(--ink);
+}
+
+.hero {
+  min-height: 74vh;
   display: grid;
-  place-items: center;
-  padding: 1.5rem;
-}
-
-.wrap {
-  width: min(720px, 100%);
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 8px;
+  align-items: end;
+  border-bottom: 1px solid var(--line);
+  background:
+    linear-gradient(135deg, rgba(20, 108, 67, 0.12), rgba(181, 93, 44, 0.1)),
+    var(--surface);
   padding: 2rem;
-  box-shadow: 0 10px 30px rgba(32, 33, 36, 0.08);
 }
 
-.label {
-  margin: 0 0 0.6rem;
-  font-size: 0.82rem;
-  font-weight: 700;
+.hero-inner,
+main {
+  width: min(980px, 100%);
+  margin: 0 auto;
+}
+
+.hero-inner {
+  padding: 4rem 0 3rem;
+}
+
+.label,
+.eyebrow {
+  margin: 0 0 0.7rem;
+  color: var(--accent-strong);
+  font-size: 0.78rem;
+  font-weight: 800;
+  letter-spacing: 0.06em;
   text-transform: uppercase;
-  color: var(--accent);
+}
+
+h1,
+h2,
+h3,
+p {
+  margin-top: 0;
 }
 
 h1 {
-  margin: 0 0 1rem;
-  line-height: 1.15;
+  max-width: 780px;
+  margin-bottom: 1rem;
+  font-size: clamp(2.45rem, 8vw, 5.8rem);
+  line-height: 0.95;
 }
 
-p {
-  margin: 0 0 1rem;
+h2 {
+  margin-bottom: 1rem;
+  font-size: clamp(1.7rem, 4vw, 3rem);
+  line-height: 1.05;
+}
+
+h3 {
+  margin-bottom: 0.45rem;
+  font-size: 1.2rem;
+}
+
+p,
+li {
   color: var(--muted);
-  line-height: 1.55;
+  font-size: 1.02rem;
+  line-height: 1.65;
 }
 
-a {
-  color: var(--accent);
-  font-weight: 700;
+code {
+  color: var(--ink);
+  font-family: "SFMono-Regular", Consolas, monospace;
+  font-size: 0.95em;
 }
 
-@media (max-width: 640px) {
-  .wrap {
+.lede {
+  max-width: 660px;
+  font-size: 1.25rem;
+}
+
+.actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  margin-top: 1.75rem;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  border: 1px solid var(--accent-strong);
+  border-radius: 6px;
+  padding: 0.7rem 1rem;
+  font-weight: 800;
+  text-decoration: none;
+}
+
+.button:focus-visible,
+.link-list a:focus-visible {
+  outline: 3px solid rgba(181, 93, 44, 0.45);
+  outline-offset: 3px;
+}
+
+.primary {
+  background: var(--accent-strong);
+  color: #ffffff;
+}
+
+.secondary {
+  background: transparent;
+  color: var(--accent-strong);
+}
+
+main {
+  padding: 3rem 2rem 5rem;
+}
+
+section {
+  padding: 3rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+section:last-child {
+  border-bottom: 0;
+}
+
+.model-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.model-grid article,
+.split article {
+  background: var(--surface);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 1.2rem;
+}
+
+.model-grid span {
+  display: inline-grid;
+  place-items: center;
+  width: 2rem;
+  height: 2rem;
+  margin-bottom: 1rem;
+  border-radius: 999px;
+  background: var(--warm);
+  color: #ffffff;
+  font-weight: 800;
+}
+
+.explain {
+  display: grid;
+  grid-template-columns: minmax(0, 0.8fr) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 1rem;
+}
+
+.steps ol {
+  display: grid;
+  gap: 0.7rem;
+  padding-left: 1.4rem;
+}
+
+.steps li::marker {
+  color: var(--warm);
+  font-weight: 800;
+}
+
+.link-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.link-list a {
+  border-bottom: 2px solid var(--warm);
+  color: var(--accent-strong);
+  font-weight: 800;
+  text-decoration: none;
+}
+
+@media (max-width: 760px) {
+  .hero {
+    min-height: auto;
     padding: 1.25rem;
   }
 
+  .hero-inner {
+    padding: 3rem 0 2rem;
+  }
+
+  main {
+    padding: 2rem 1.25rem 4rem;
+  }
+
+  .model-grid,
+  .explain,
+  .split {
+    grid-template-columns: 1fr;
+  }
+
   h1 {
-    font-size: 1.45rem;
+    font-size: 3rem;
   }
 }
